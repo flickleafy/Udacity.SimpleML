@@ -1,0 +1,27 @@
+{
+  "name": "udacity.simpleml",
+  "version": "1.0.0",
+  "description": "Just a quick start project to test ML together Node.js",
+  "main": "src/app.js",
+  "scripts": {
+    "start": "node ./src/app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/eerbano/Udacity.SimpleML.git"
+  },
+  "keywords": [
+    "machine",
+    "learning"
+  ],
+  "author": "Enzo Erbano",
+  "license": "GPL-3.0-or-later",
+  "bugs": {
+    "url": "https://github.com/eerbano/Udacity.SimpleML/issues"
+  },
+  "homepage": "https://github.com/eerbano/Udacity.SimpleML#readme",
+  "dependencies": {
+    "brain.js": "^2.0.0-beta.2"
+  }
+}
