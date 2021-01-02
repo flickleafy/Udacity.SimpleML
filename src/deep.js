@@ -9,20 +9,23 @@ const tensorHelper = require("./image/tensorHelper")
 
 deepLearning.initialize = async () =>
 {
+    // Load our image
     const image = await imageLoader.getImage('./res/eifel.jpg')
 
+    // Convert image to a tensor
     const tensor3d = tensorHelper.imageTo3dTensor
 
+    // Classify our tensor
     await classify(tensor3d)
 }
 
-async function classify(image)
+async function classify(tensor)
 {
-    // Load the model.
+    // Load a model from MobileNet
     const model = await mobilenet.load();
 
-    // Classify the image.
-    const predictions = await model.classify(image);
+    // Classify our tensor
+    const predictions = await model.classify(tensor);
 
     console.log('Predictions: ');
 

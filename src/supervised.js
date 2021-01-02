@@ -8,16 +8,23 @@ const imageHelper = require("./image/imageHelper")
 
 photoLightness.initialize = async () =>
 {
+    // Initialize neural network object
     const neuralNetwork = new brain.NeuralNetwork()
 
+    // Train our model based on our data samples
     neuralNetwork.train(dataSamples.colorSamples);
 
+    // Load local image from our resources
     const image = await imageLoader.getImage('./res/eifel.jpg')
 
-    const pixelColor = imageHelper.averagePixelColorRGB(image)
+    // Get average pixel color of whole image
+    const pixelColorRGB = imageHelper.averagePixelColorRGB(image)
 
-    const hslColor = imageHelper.pixelColorRGBToHSLfp(pixelColor)
-    const predictionResult = brain.likely(hslColor, neuralNetwork);
+    // Convert to the format used in our model
+    const pixelColorHSL = imageHelper.pixelColorRGBToHSLfp(pixelColorRGB)
+
+    // Predict if it is dark or light based on the averaged pixel
+    const predictionResult = brain.likely(pixelColorHSL, neuralNetwork);
     console.log(predictionResult);
 }
 
