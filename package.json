@@ -22,12 +22,6 @@
   },
   "homepage": "https://github.com/eerbano/Udacity.SimpleML#readme",
   "dependencies": {
-    "@tensorflow-models/mobilenet": "^2.0.4",
-    "@tensorflow/tfjs": "^2.7.0",
-    "@tensorflow/tfjs-node": "^2.7.0",
-    "brain.js": "^2.0.0-beta.2",
-    "get-image-data": "^5.0.0",
-    "jimp": "^0.16.1",
-    "sharp": "^0.27.0"
+    "brain.js": "^2.0.0-beta.2"
   }
 }
