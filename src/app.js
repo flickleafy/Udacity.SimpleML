@@ -1,6 +1,7 @@
-const pixelLightness = require("./ml/supervisedLearning")
+const pixelLightness = require('./ml/supervisedLearning')
+const testData = require('../res/testData/testColorSamples')
 
-const pixelColorHSL = { h: 0.277, s: 0.25, l: 0.20 } // hsl(100, 25%, 20%)
+const pixelColorHSL = testData.testColorSample
 
 pixelLightness.initialize()
 
